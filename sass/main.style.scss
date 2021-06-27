@@ -1,0 +1,144 @@
+$pushti:#F841A6;
+$Ocolor:#59DEFF;
+.container-fluid{
+    width: 100%;
+    height: 120vh;
+    padding-top: 80px;
+    background-image: linear-gradient(to top, #d25be4, #c56bde, #ba77d6, #b181cd, #a98ac2);
+    position: relative;
+    .logo1{
+        position: absolute;
+        right: 3%;
+        top: 0%;
+    }
+    
+    
+    .logo{
+        top: 5%;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        
+    }
+       .board{
+        position: relative;
+       max-width:700px;
+       height: 90vh;
+       margin: 0 auto;
+       padding: 0 50px;
+       background-color: rgba($color: #686adf50, $alpha: 0.4);
+       z-index: 100;
+       border: $pushti solid 3px;
+       .title{
+  color:  $pushti;
+  font-size: 32px;
+  margin-top: 10px;
+  font-weight: bolder;
+       }
+       table{
+           max-width: 400px;
+           max-height: 400px;
+           margin: 50px auto 0 auto;
+           border-radius: 12px !important;
+           tr{
+              &:nth-child(n){
+                td{
+                    width: 100px;
+                    height: 100px;
+                    &:nth-child(n){
+                        background: #DFE0FE;
+
+                        text-align: center;
+                    }
+                    &:nth-child(2n){
+                        background-color: white;
+                        text-align: center;
+                    }
+                }
+              }
+              &:nth-child(2n){
+                td{
+                    width: 100px;
+                    height: 100px;
+                    &:nth-child(n){
+                        background-color: white;
+                        text-align: center;
+                    }
+                    &:nth-child(2n){
+                        background: #DFE0FE;
+
+                        text-align: center;
+                    }
+                   
+                }
+              }
+             
+               
+           }
+       }
+}
+.globe1,.globe2,.globe3{
+    position: absolute;
+}
+
+.globe1{
+    top:0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.globe2{
+    bottom: 0;
+    right: 0;
+}
+.globe3{
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+
+}
+}
+.x,.o{
+    
+    font-size: 48px;
+    font-weight: bolder;
+}
+.o{
+    color: $Ocolor;
+}
+.x{
+    color: $pushti;
+}
+#myModal{
+position: absolute;
+content: "";
+background-color: rgba($color: #000000, $alpha: 0.8);
+width: 100%;
+height: 100%;
+top: 0;
+left: 0;
+display: flex;
+justify-content: center;
+align-items: center;
+z-index: 10000;
+.my-modal{
+    font-size: 32px;
+    text-transform: capitalize;
+    color: white;
+    padding: 20px 100px;
+    border-radius: 23px;
+    font-weight: bolder;
+    animation-name: zoomIn;
+    animation-duration: 0.4s;
+    animation-timing-function: linear
+}
+};
+@keyframes zoomIn {
+    0%{
+        transform: scale(0.5);
+        opacity: 0.5;
+    }
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
